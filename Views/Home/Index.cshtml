@@ -1,0 +1,68 @@
+﻿@model TopLib.Models.Register
+
+    <div class="text-center">
+        <h1 class="display-4">Library</h1>
+        <div>
+            <a asp-action="Index">Home</a>
+        </div>
+        <p>TopLib  <a asp-action="Index">The learning Journal you wish you had</a>.</p>
+    </div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+}
+
+
+<h4>Register</h4>
+<hr />
+
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="container">
+                <!--Grid row-->
+                <div class="row mt-5">
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+
+                        <form asp-action="Index">
+
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group" background="white">
+                                <label asp-for="Name" class="btn btn-default gender-label:active { background-color: white-text"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label"></label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label"></label>
+                                <input asp-for="Password" class="form-control" />
+                                @Html.ValidationMessageFor(model => model.Password,"", new { @class="text-danger"})
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ConfirmPassword" class="control-label"></label>
+                                <input asp-for="ConfirmPassword" class="form-control" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Register" class="btn btn-indigo" />
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        
+    </div>
+    

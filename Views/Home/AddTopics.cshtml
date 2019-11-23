@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Add Topics";
+    
+}
+<h1>@ViewData["Title"]</h1>
+
+
+    <form>
+        <fieldset>
+            <legend>Input your Topics and Descriptions</legend>
+            <div class="form-group row">
+                <label for="User" class="col-sm-2 col-form-label">User</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly="" class="form-control-plaintext" id="User" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Topic</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Topic">
+
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="exampleTextarea">Description</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">Source</label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                <small id="fileHelp" class="form-text text-muted">Source name</small>
+            </div>
+
+            <fieldset class="form-group">
+                <legend>Checkboxes</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="" checked="">
+                        High Priority
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox">
+                        Medium Priority
+                    </label>
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Add To List</button>
+        </fieldset>
+    </form>
